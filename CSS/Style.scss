@@ -1,0 +1,1427 @@
+@import "./Outils/variables";
+@import "./Outils/Mixins";
+@import "./Outils/Bases";
+
+
+
+/* Accueil */
+
+.loader-bloc{@include loaderblock-config
+    }
+
+    @keyframes loader{
+        0%{
+        visibility: visible;}
+      
+      
+        100%{
+            visibility: hidden;
+        }
+      }
+
+    .load{
+        position: relative;
+        right: 550px;
+        bottom: 300px;
+        z-index: 105;
+ 
+        }
+
+    .garfo{
+            position: relative;
+            left: 40px;
+            bottom: 18px;
+            z-index: 3000;
+          
+    }
+
+
+    @keyframes rotateload {
+
+        to{
+          transform: rotate(1turn)
+        }}
+
+    .circulo{
+       @include circle-config;
+       
+      }
+
+  
+
+header{
+@include header-config;
+ h1{
+@include h1-config;
+
+@include mobile{
+    right: 20px;
+}
+
+@include mobile6{
+    right: 40px;
+}
+
+@include mobile5{
+    right: 65px;
+}
+
+@include tablet{
+    font-size: 40px;
+    height: 50px;
+    width: 820px;
+    padding-top: 10px;
+}
+@include ordi{
+    width: 102%;
+    right: 50px;
+}
+
+@include ordi20{
+    left: -40px;
+}
+}
+.back-header{
+    background-color: $second-background-color;
+    position: relative;
+    @include mobile{
+       right: 5px;
+        width:410px;
+        height: 350px;
+    }
+
+    @include mobile6{
+        right: 15px;
+    }
+
+    @include mobile5{
+        left: -30px;
+    }
+
+    @include tablet{
+        right: 10px;
+        padding-bottom: 10px;
+    }
+
+    @include ordi{
+        width: 102%;
+        right: 50px;
+    }
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+
+#local{
+        @include icon-local;
+     @include mobile{
+        width: 450px;
+        padding-bottom: 20px;
+        position: relative;
+        right: 30px;
+        bottom: 30px;
+        padding-top: 20px;
+                          }
+    @include mobile5{
+        right: 40px;
+    }
+         @include tablet{
+             bottom: 35px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 25px;
+    }
+    @include ordi{
+        height: 40px;
+        width: 102%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        right: 20px;
+    }
+
+    .fa-map-marker-alt
+        {
+            position: relative;
+            right: 20px;
+            font-size: large;
+        }
+
+    }
+
+    h2{
+        @include htitre;
+        @include mobile{
+            left: 80px;
+            top: 2px;
+            width: 250px;
+        }
+        
+        @include mobile6{
+            left: 75px;
+        }
+        @include mobile5{
+            left: 55px;
+        }
+        @include tablet{
+            bottom: 20px;
+        }
+    }
+
+    p{
+        @include paragraph;
+        position: relative;
+        @include mobile5{width: 300px;
+        
+            right: -35px;}
+            @include tablet{
+                top: -20px;
+            }
+    }
+
+    }
+
+
+    .buttton{
+        @include click-button;
+position: relative;
+      
+
+        &:hover{
+            filter: brightness(105%);
+            box-shadow: 5px 5px 5px black;
+            transition-duration: 500ms;
+        }
+
+        @include mobile{
+            left: -10px;
+            top: 10px;
+            width: 250px;
+        }
+
+        @include mobile6{
+            left: -15px;
+        }
+
+        @include mobile5{
+            left: -40px;
+            top: 10px;
+            width: 270px;
+        }
+
+        @include tablet{
+            left: 180px;
+            bottom: 10px;
+            width: 270px;
+        }
+        @include ordi{
+            left: 520px;
+        }
+
+        @include ordi20{
+            left: 600px;
+        }
+
+        @include ordi22{
+            left: 650px;
+        }
+
+        @include ordi24{
+            left: 780px;
+        }
+
+       
+      
+       
+    }
+
+
+    h3{
+        @include htitre;
+        @include mobile{
+            left: 30px;
+        }
+        @include tablet{
+            left: 300px;
+        }
+        @include ordi{
+            left: 620px;
+        }
+
+        @include ordi20{
+            left: 720px;
+        }
+
+        @include ordi22{
+            left: 780px;
+        }
+
+        @include ordi24{
+            left: 880px;
+        }
+
+        
+        
+    }
+
+    section{
+
+     a{
+         text-decoration: none;
+         color: black;
+         :hover{
+            background-color: #e3dbec; 
+            transition-duration: 500ms;
+            .fa-mobile-alt{
+                color: $primary-color;
+            }
+            .fa-list-ul{
+                color: $primary-color;
+            }
+            .fa-store{
+                color: $primary-color;
+            }
+         }
+        
+     }
+
+        .filtre-container{
+            display: flex;
+            position: relative;
+            @include mobile{
+                flex-direction: column;
+                justify-content: space-around;
+                left: 60px;
+            }
+            @include mobile6{
+                left: 40px;
+            }
+
+
+            @include tablet{
+                flex-direction: column;
+                justify-content: space-around;
+                left: 230px;
+            }
+            @include ordi{
+                flex-direction: row;
+                left: 20px;
+            }
+        }
+    
+        .filtre{
+            @include filtre-config;
+            @include mobile5{
+                width: 100px;
+            }
+  
+            }   
+
+            .number{
+ @include number-config;
+        }
+
+       
+            .texte-filtre{
+      
+                width: 210px;
+                position: relative;
+                bottom: 15px;
+                right: 20px;
+                font-size: 18px;
+                @include mobile5{
+                    right: 50px;
+                }
+            }
+
+            .fa-mobile-alt{
+                @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
+            }
+    
+            .fa-list-ul{
+                @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
+            }
+            
+            .fa-store{
+                @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
+            } 
+
+    }    
+
+main{
+  
+
+        @include main-config;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        
+        @include mobile{
+            flex-direction: column;
+            top: 70px;}
+        @include tablet{
+                flex-direction: column;
+                top: 70px;}
+                @include ordi{
+                    flex-direction: row;
+                    top: 80px;
+                    right: 10px;
+                   
+                padding-bottom: 100px;} 
+                
+                @include ordi20{
+width: 100%;
+
+                }
+
+}
+
+
+
+figure{
+    @include fig-config;
+    @include mobile{
+        width: 360px;
+    right: 10px;}
+    @include mobile6{
+        left: -20px;
+        width: 340px;
+    }
+    @include mobile5{
+        left: -30px;
+        width: 300px;
+    }
+    @include tablet{
+        width: 340px;
+    left: 160px;}
+
+    @include ordi{
+    height: 180px;
+    width: 180px;
+    left: 40px;
+    top: 80px;} 
+
+    @include ordi20{
+        width: 280px;
+        left: -70px;
+        height: 220px;
+        margin-right: 70px;
+    }
+
+    @include ordi22{
+        margin-right: 100px;
+    }
+
+
+    @include ordi24{
+        margin-right: 150px;
+    }
+
+
+    
+
+img{
+    @include img-config;
+    @include mobile{
+        height: 200px;
+        width: 360px;
+    }
+    @include mobile6{
+        height: 200px;
+        width: 340px;
+    }
+    @include mobile5{
+        
+        width: 300px;
+    }
+    @include tablet{
+        height: 200px;
+        width: 340px;
+    }
+
+    @include ordi{
+        height: 120px;
+        width: 180px;
+    }
+
+    @include ordi20{
+     height: 160px;
+            width: 280px;
+    }
+}
+
+}
+
+.heartanimation{
+  
+    width: 5px;
+    height: 5px;
+
+    @include mobile{
+        &:active{
+          
+
+          
+
+            .secondheart, .forthheart{
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s, visibility 0.3s;
+                transition-timing-function: ease-out;
+                transition-duration: 3500ms;
+                }
+        }}
+        @include tablet{
+            &:active{
+
+                .secondheart, .forthheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }}
+        @include ordi{
+            &:hover{
+           
+                .secondheart, .forthheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }
+        }
+
+        @include ordi20{
+            &:hover{
+           
+                .secondheart, .forthheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }
+        }
+
+        @include ordi22{
+            &:hover{
+           
+                .secondheart, .forthheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }
+        }
+
+        @include ordi24{
+            &:hover{
+           
+                .secondheart, .forthheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }
+        }
+}
+
+figcaption{
+
+    transition: opacity 0.3s, visibility 0.3s;
+    transition-property: all;
+
+    @include mobile{
+    &:active{
+        .firstheart{
+
+            display: none;
+        }
+        .secondheart{
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s, visibility 0.3s;
+            transition-timing-function: ease-out;
+            transition-duration: 3500ms;
+            }
+    }}
+    @include tablet{
+        &:active{
+            .firstheart{
+    
+                display: none;
+            }
+            .secondheart{
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s, visibility 0.3s;
+                transition-timing-function: ease-out;
+                transition-duration: 3500ms;
+                }
+        }}
+    @include ordi{
+        &:hover{
+            .firstheart{
+    
+                display: none;
+            }
+            .secondheart{
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s, visibility 0.3s;
+                transition-timing-function: ease-out;
+                transition-duration: 3500ms;
+                }
+        }
+    }
+
+}
+
+   
+.new{
+    @include new-config;
+    @include mobile{
+        bottom: 220px;
+        left: 270px;
+    }
+
+    @include mobile6{
+        bottom: 220px;
+        left: 250px;
+    }
+
+    @include mobile5{
+        bottom: 220px;
+        left: 200px;
+    }
+    @include tablet{
+        bottom: 220px;
+        left: 250px;
+    }
+
+    @include ordi{
+        bottom: 150px;
+        left: 90px;
+    }
+
+    @include ordi20{
+        left: 180px;
+        bottom: 180px;
+    }
+}
+
+
+
+.figbold{
+    @include caption-bold;
+
+    @include ordi{
+        font-size: 15px;
+    }
+}
+
+.light{
+    @include caption-light;
+    position: relative;
+    left: 10px;
+
+    @include ordi{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+.firstheart{
+    position: relative;
+    font-size: 30px;
+    @include mobile{
+        left: 350px;
+    bottom: 60px;
+    }
+    @include mobile6{
+        left: 320px;
+    }
+    @include mobile5{
+        left: 270px;
+    bottom: 60px;
+    }
+    @include tablet{
+        left: 500px;
+    bottom: 60px;
+    }
+    @include ordi{
+        left: -30px;
+    bottom: -225px;
+    font-size: 20px;
+    }
+
+    @include ordi20{
+        left: -170px;
+        bottom: -270px;
+    }
+
+    @include ordi22{
+        left: -200px;
+        bottom: -270px;
+    }
+
+    @include ordi24{
+        left: -250px;
+        bottom: -270px;
+    }
+    }
+
+
+   
+
+    .secondheart{
+        @include hidden-heart-config;
+         @include mobile{
+        left: 350px;
+    bottom: 90px;
+    }
+    @include mobile6{
+        left: 320px;
+    }
+    @include mobile5{
+        left: 270px;
+        bottom: 90px;
+    }
+    @include tablet{
+        left: 500px;
+        bottom: 90px;
+    }
+    @include ordi{
+        left: -30px;
+    bottom: -204px;
+    font-size: 20px;
+    }
+
+    @include ordi20{
+        left: -170px;
+        bottom: -249px;
+    }
+
+    @include ordi22{
+        left: -200px;
+        bottom: -249px;
+    }
+
+    @include ordi24{
+        left: -250px;
+        bottom: -249px;
+    }
+        }
+
+
+
+        .thirdheart{
+            position: relative;
+            font-size: 30px;
+            
+            @include mobile{
+                left: 360px;
+            bottom: 70px;
+            }
+            
+            
+            
+            @include mobile6{
+                left: 330px;
+            bottom: 70px;
+            }
+            
+            @include mobile5{
+                left: 280px;
+                bottom: 75px;
+            }
+            
+            @include tablet{
+                left: 550px;
+            bottom: 80px;
+            }
+            @include ordi{
+                left: -80px;
+            bottom: -100px;
+            font-size: 30px;
+            }
+
+            @include ordi20{
+                left: -50px;
+            }
+            }
+            
+            .forthheart{
+                @include hidden-heart-config;
+                
+                @include mobile{
+                    left: 360px;
+                bottom: 100px;
+                }
+                
+                @include mobile6{
+                    left: 330px;
+                    bottom: 100px;
+                }
+            
+                @include mobile5{
+                    left: 280px;
+                    bottom: 105px;
+                }
+                
+                @include tablet{
+                    left: 550px;
+                    bottom: 110px;
+                }
+                @include ordi{
+                    left: -80px;
+                bottom: -70px;
+                font-size: 30px;
+                }
+
+                @include ordi20{
+                    left: -50px;
+                }
+                }
+ 
+
+    footer{
+
+        position: relative;
+        background-color: rgb(58, 57, 57);
+        @include mobile{
+        top: 20px;
+        height: 200px;
+        }
+
+        @include tablet{
+            top: 30px;
+            height: 120px;
+            }
+
+            @include ordi20{
+                height: 200px;
+            }
+            
+    }
+
+    h6{
+        font-family: $logofont;
+        color: #FFF;
+        font-size: 20px;
+        @include mobile{
+   text-align: left;
+   position: relative;
+   top: 10px;
+   left: 35px;
+        }
+
+        @include tablet{
+            text-align: center;
+            position: relative;
+            top: 10px;
+            left: 5px;
+                 }
+    }
+
+    ul{a{text-decoration: none;
+    color: #FFF;}
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        @include mobile{
+            height: 100px;
+            flex-direction: column;
+            bottom: 10px;
+        }
+        @include tablet{
+            right: 25px;
+        }
+
+        @include ordi20{
+            top: 50px;
+        }
+   
+    li{
+        list-style: none;
+        font-family: $font-text2;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #FFF;
+    } }
+
+    .foot{
+        padding-bottom: 15px;
+    }
+
+    .fa-hands-helping{
+        padding-right: 5px;
+    }
+    
+    .fa-utensils{
+        padding-right: 10px;
+    }
+
+/* Menu */
+
+
+
+.fa-arrow-left{
+    position: relative;
+    font-size: 25px;
+    right: 90px;
+    @include ordi{
+        right: 80px;
+    }
+    @include mobile5{
+        right: 50px;
+    }
+
+
+}
+
+.menu{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+
+    h1{
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        position: relative;
+        top: 20px;
+        @include tablet{
+            box-shadow: none;
+            height: 30px;
+            width: 100%;
+        }
+        @include mobile5{
+            right: 70px;
+        }
+        @include ordi{
+            right: -15px;
+        }
+        @include ordi20{
+            left: 35px;
+        }
+    }
+
+    img{
+       align-self: center;
+        width: 440px;
+        height: 320px;
+        @include tablet{
+            left: 180px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        @include ordi{
+            left: 500px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        @include ordi20{
+            height: 480px;
+            width: 700px;
+        }
+    }
+}
+
+
+
+.menumain{
+   @include menumain-config;
+    @include ordi{
+        position: relative;
+        left: 35px;
+        height: 420px;
+        width: 95%;
+    }
+
+    @include ordi20{
+      
+        left: 50px;
+    }
+
+ 
+
+
+h4{
+    @include h4-config;
+    @include mobile6{
+        padding-left: 20px;
+    }
+    @include tablet{
+        margin-left: 250px;
+    }
+    @include ordi{
+       margin-top: 150px;
+       margin-left: 10px;
+    }
+
+    @include ordi20{
+        font-size: 40px;
+        left: 80px;
+    }
+
+}
+
+
+
+h5{
+    @include h5-config;
+    left: 10px;
+    bottom: 70px;
+    @include mobile{
+        left: 40px;
+    }
+    @include mobile6{
+        left: 20px;
+    }
+    @include tablet{
+        top: -40px;
+        left: 340px;
+    }
+    @include ordi{
+        top: 20px;
+        left: 40px;
+        height: 15px;
+    }
+
+    @include ordi20{
+        left: 250px;
+    }
+
+
+}
+
+@keyframes menuslide {
+    0% {
+      transform: translateY(5%);
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+  opacity: 1;
+    }
+  }
+
+
+.entrees{
+   
+      animation: 2000ms ease-out 0s 1 menuslide;
+ ;}
+
+.plats{
+    animation: 5000ms ease-out 0s 1 menuslide;
+   
+;}
+
+.desserts{
+   
+    animation: 8000ms ease-out 0s 1 menuslide;
+
+;}
+
+
+
+.choix{
+   @include choix-config;
+
+&:hover {
+    .circle{
+    right: 1px;
+    
+}
+ 
+.fa-check-circle{
+
+    transition: 800ms;
+    transform:rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+}
+
+.simpleplat{
+    width: 180px;
+
+}
+
+.boldnum{
+    left: 200px;
+    @include mobile5{
+        left: 180px;
+    }
+}
+
+.boldplat{
+    width: 190px;
+}
+  
+}
+@include mobile6{
+    left: 15px;
+}
+
+@include mobile5{
+   left: 10px;
+    width: 300px;
+}
+
+
+@include tablet{
+    left: 220px;
+    bottom: 50px;
+}
+@include ordi{
+    top: 100px;
+    left: -30px;
+ 
+}
+
+@include ordi20{
+    left: 70px;
+    margin-bottom: 30px;
+}
+
+@include ordi24{
+    left: 70px;
+    margin-bottom: 30px;
+    margin-right: 140px;
+}
+
+}
+
+
+.circle{
+
+   @include border-anim-config;
+    
+}
+
+
+}
+
+.fa-check-circle{
+    position: absolute;
+    font-size: 20px;
+    top: 30px;
+    right: 32px;
+    color: #FFF;
+
+}
+
+.boldplat{
+    @include caption-bold;
+ @include text-anim;
+    @include mobile5{
+        font-size: 18px;
+    }
+
+  
+}
+
+.simpleplat{
+    @include caption-light;
+    padding: 10px;
+    font-size: 15px;
+    height: 10px;
+    width: 280px;
+ @include text-anim;
+    @include mobile5{
+        font-size: 13px;
+    }
+
+}
+
+.boldnum{
+    @include caption-bold;
+@include boldnum-config;
+    @include mobile5{
+        left: 250px; 
+        bottom: 18px;
+    }
+}
+
+.btn{
+    @include click-button;
+ 
+    &:hover{
+        transition-duration: 500ms;
+        filter: brightness(105%);
+        box-shadow: 5px 5px 5px black;
+    }
+
+    text-align: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    left: 8px;
+    top: -30px;
+       @include tablet{
+        left: 200px;
+        top: 20px;
+    }
+    @include mobile5{
+        left: -40px;
+    }
+    @include ordi{
+        left: -790px;
+        width: 400px;
+        top: -30px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    @include ordi20{
+        left: -780px;
+    }
+
+    @include ordi22{
+        left: -750px;
+    }
+
+    @include ordi24{
+        left: -1050px;
+    }
+   
+  
+}
+
+#btn2{
+
+  
+    @include click-button;
+ 
+    &:hover{
+        transition-duration: 500ms;
+        filter: brightness(105%);
+        box-shadow: 5px 5px 5px black;
+    }
+
+    text-align: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    left: 8px;
+    top: -30px;
+       @include tablet{
+        left: 200px;
+        top: 20px;
+    }
+    @include ordi{
+        left: -765px;
+        width: 400px;
+        top: -30px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
+    }
+
+    @include ordi20{
+        left: -750px;
+    }
+
+    @include ordi22{
+        left: -700px;
+    }
+
+    @include ordi24{
+        left: -1000px;
+    }
+    
+}
+
+
+
+#btn3{
+
+  
+    @include click-button;
+ 
+    &:hover{
+        transition-duration: 500ms;
+        filter: brightness(105%);
+        box-shadow: 5px 5px 5px black;
+    }
+
+    text-align: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    left: 8px;
+    top: -30px;
+       @include tablet{
+        left: 200px;
+        top: 20px;
+    }
+    @include ordi{
+        left: -820px;
+        width: 400px;
+        top: -30px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
+    }
+
+    @include ordi20{
+        left: -820px;
+    }
+
+    @include ordi22{
+        left: -800px;
+    }
+
+    @include ordi24{
+        left: -1100px;
+    }
+    
+}
+
+#btn4{
+
+  
+    @include click-button;
+ 
+    &:hover{
+        transition-duration: 500ms;
+        filter: brightness(105%);
+        box-shadow: 5px 5px 5px black;
+    }
+
+    text-align: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    left: 8px;
+    top: -95px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  
+       @include tablet{
+        left: 200px;
+        top: -50px;
+    }
+    @include ordi{
+        left: -830px;
+        width: 400px;
+        top: -70px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
+    }
+
+    @include ordi20{
+        left: -820px;
+    }
+
+   @include ordi22{
+        left: -800px;
+    }
+
+    @include ordi24{
+        left: -1100px;
+    }
+    
+}
+
+.menufooter{
+    @include menufooter-config;
+    top: -100px;
+    @include ordi{ height: 180px;}
+    @include ordi20{top: -70px;}
+
+    h6{
+        position: relative;
+        @include mobile{top: 40px;}
+      
+    }
+
+    ul{
+
+        a{text-decoration: none;}
+        position: relative;
+        top: 20px;
+        li{
+        @include ordi{
+            font-size: 20px;
+        }}
+
+        @include ordi20{
+            top: 50px;
+        }
+    }
+
+}
+
+
+
+.menufooter4{
+    @include menufooter-config;
+    top: -70px;
+    @include ordi{ height: 180px;}
+    @include ordi20{height: 155px;
+    top: -54px;}
+
+    h6{
+        @include mobile{top: 40px;}
+        @include tablet{
+        position: relative;
+        left: -10px;
+    }
+    }
+
+    ul{
+        a{text-decoration: none;}
+        position: relative;
+        top: 20px;
+        @include ordi{
+            font-size: 20px;
+        }
+      
+    }
+
+    
+
+}
+
+
+
